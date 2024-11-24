@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap"
+    rel="stylesheet">
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap"
+    rel="stylesheet">
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Calligraffitti&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap"
+    rel="stylesheet">
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+
+  <link rel="icon" href="imgs/bookmrk.jpeg">
+
+
+  <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+
+
+  <link rel="stylesheet" href="CSS/main.css" />
+
+
+</head>
+
+<body>
+
+
+  <div class="container text-center my-5">
+    <h1>Bookmarker</h1>
+    <p class="dots mt-5"></p>
+    <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+
+    <form class="mt-5" onsubmit="addBookmark(event)">
+      <label for="bookmarkName"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+      <div class="input-container">
+        <input type="text" id="bookmarkName" name="input1" placeholder="Bookmark Name" >
+        <span id="bookmarkNameIcon"></span> 
+      </div>
+      <br>
+      <label for="websiteURL"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+      <div class="input-container">
+        <input type="text" id="websiteURL" name="input2" placeholder="Website URL" >
+        <span id="websiteURLIcon"></span> 
+      </div>
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+
+    <p class="dots"></p>
+
+    <table class="w-100">
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="bookmarkTable">
+
+      </tbody>
+    </table>
+
+  </div>
+
+
+<div class="modal fade" id="validationModal" tabindex="-1" aria-labelledby="validationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-body d-flex justify-content-between ">
+
+        <div class="circle-container">
+          <i class="fa-solid fa-circle red-circle"></i>
+          <i class="fa-solid fa-circle orange-circle"></i>
+          <i class="fa-solid fa-circle green-circle"></i>
+        </div>
+  
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <p id="validationMessage"></p>
+    </div>
+  </div>
+</div>
+
+
+  <script src="JS/bootstrap.bundle.min.js"></script>
+
+
+
+  <script src="JS/index.js"></script>
+
+</body>
+
+</html>
